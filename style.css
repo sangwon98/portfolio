@@ -96,7 +96,6 @@ a {
   align-items: center;
   color: var(--color-white);
   padding: 16px;
-  opacity: 1;
 }
 .navbar__menu {
   display: flex;
