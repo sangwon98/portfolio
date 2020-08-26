@@ -118,6 +118,14 @@ a {
   font-weight: var(--weight-semi-bold);
 }
 
+.navbar__toggle-btn {
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: var(--color-white);
+  display: none;
+}
+
 /*Home*/
 #Home {
   background: url("imgs/노을.jpg") center/cover no-repeat;
@@ -416,4 +424,40 @@ a {
   transform: scale(1.1);
   color: var(--color-pink);
   transition: all var(--animation-duration) ease;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__toggle-btn {
+    display: block;
+    top: 25px;
+  }
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar__menu {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
+  .About__majors {
+    flex-direction: column;
+  }
+  .major {
+    margin-bottom: 38px;
+  }
+  .Skillset {
+    flex-direction: column;
+  }
+  .Skill__bar {
+    width: 100%;
+  }
+  .project {
+    flex-grow: 1;
+  }
+  .Testimonial__avatar {
+    width: 100px;
+    height: 100px;
+  }
 }
