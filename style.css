@@ -43,7 +43,7 @@ h1 {
   margin: 16px 0px;
 }
 h2 {
-  font-size: var(--font-regular);
+  font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0;
@@ -92,10 +92,11 @@ a {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background: var(--color-pink);
+  background: var(--color-blue);
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  opacity: 1;
 }
 .navbar__menu {
   display: flex;
@@ -389,4 +390,31 @@ a {
 }
 .Testimonial__speech-bubble a {
   color: var(--color-blue);
+}
+
+#Contact {
+  background-color: var(--color-blue);
+}
+.Contact__title,
+.Contact__email,
+.contact__rights {
+  color: var(--color-white);
+}
+.Contact__title {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+.Contact__email {
+  margin-bottom: 40px;
+  margin-top: 0px;
+}
+.contact__links {
+  font-size: var(--font-large);
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-pink);
+  transition: all var(--animation-duration) ease;
 }
