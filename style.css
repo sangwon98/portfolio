@@ -92,10 +92,17 @@ a {
 #navbar {
   display: flex;
   justify-content: space-between;
-  background: var(--color-blue);
+  background: transparent;
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  position: fixed;
+  width: 100%;
+  transition: all var(--animation-duration) ease-in-out;
+}
+#navbar.navbar--dark {
+  background-color: var(--color-blue);
+  padding: 8px;
 }
 .navbar__menu {
   display: flex;
@@ -131,6 +138,7 @@ a {
   background: url("imgs/노을.jpg") center/cover no-repeat;
   padding: 40px;
   text-align: center;
+  padding-top: 120px;
 }
 .Home__avatar {
   width: 250px;
