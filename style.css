@@ -142,6 +142,7 @@ a {
   text-align: center;
   padding-top: 120px;
 }
+
 .Home__avatar {
   width: 250px;
   height: 250px;
@@ -373,6 +374,26 @@ a {
   left: 50%;
   margin-top: 8px;
   margin-left: -12.5px;
+}
+/*scroll*/
+.arrowbtn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  font-size: 50px;
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  color: var(--color-yellow);
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  transition: all var(--animation-duration) ease-in-out;
+  opacity: 0;
+  pointer-events: none; /*개꿀    ==============================  코드*/
+}
+.arrowbtn.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 /* testimonials */
 #Testimonials {

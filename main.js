@@ -29,10 +29,6 @@ ContactBtn.addEventListener("click", () => {
   scrollTo("#Contact");
 });
 
-function scrollTo(Selector) {
-  const scrollTo = document.querySelector(Selector);
-  scrollTo.scrollIntoView({ behavior: "smooth" });
-}
 const home = document.querySelector(".Home__container");
 const homeHeight = home.getBoundingClientRect().height;
 window.addEventListener("scroll", () => {
@@ -40,3 +36,18 @@ window.addEventListener("scroll", () => {
   console.log(1 - window.scrollY / homeHeight);
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
+const arrowbutton = document.querySelector(".arrowbtn");
+document.addEventListener("scroll", () => {
+  if (1 - window.scrollY / homeHeight > 0) {
+    arrowbutton.classList.remove("visible");
+  } else {
+    arrowbutton.classList.add("visible");
+  }
+});
+arrowbutton.addEventListener("click", () => {
+  scrollTo("#Home");
+});
+function scrollTo(Selector) {
+  const scrollTo = document.querySelector(Selector);
+  scrollTo.scrollIntoView({ behavior: "smooth" });
+}
