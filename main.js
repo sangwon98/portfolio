@@ -62,6 +62,12 @@ workbtncontainer.addEventListener("click", (e) => {
   if (filtertarget == null) {
     return;
   }
+  //버튼 클릭시 색깔 넘어가기
+  const active = document.querySelector(".category__btn.selected");
+  active.classList.remove("selected");
+  const target =
+    e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
+  target.classList.add("selected");
 
   workprojects.classList.add("anim-out");
   setTimeout(() => {
@@ -74,9 +80,6 @@ workbtncontainer.addEventListener("click", (e) => {
       }
     });
 
-    if (filtertarget === filtertarget) {
-      workactive.classList.remove("active");
-    }
     workprojects.classList.remove("anim-out");
   }, 300);
 });
