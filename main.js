@@ -28,7 +28,7 @@ const ContactBtn = document.querySelector(".home__contact");
 ContactBtn.addEventListener("click", () => {
   scrollTo("#Contact");
 });
-
+//홈화면 스코롤시 투명하게
 const home = document.querySelector(".Home__container");
 const homeHeight = home.getBoundingClientRect().height;
 window.addEventListener("scroll", () => {
@@ -36,6 +36,7 @@ window.addEventListener("scroll", () => {
   console.log(1 - window.scrollY / homeHeight);
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
+//어느정도 스크롤 되면 에로우버튼 생성
 const arrowbutton = document.querySelector(".arrowbtn");
 document.addEventListener("scroll", () => {
   if (1 - window.scrollY / homeHeight > 0) {
@@ -47,6 +48,39 @@ document.addEventListener("scroll", () => {
 arrowbutton.addEventListener("click", () => {
   scrollTo("#Home");
 });
+//project button
+const workbtncontainer = document.querySelector(".work__Categories");
+const workprojects = document.querySelector(".work__projects");
+const projects = document.querySelectorAll(".project");
+const workactivebtn = document.querySelector(".work__Categories");
+const workactive = document.querySelector(".category__btn.active");
+const workaddedactive = document.querySelector("category__btn");
+workbtncontainer.addEventListener("click", (e) => {
+  const filtertarget =
+    e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  console.log(filtertarget);
+  if (filtertarget == null) {
+    return;
+  }
+
+  workprojects.classList.add("anim-out");
+  setTimeout(() => {
+    projects.forEach((project) => {
+      console.log(project.dataset.type);
+      if (filtertarget === "*" || filtertarget === project.dataset.type) {
+        project.classList.remove("invisible");
+      } else {
+        project.classList.add("invisible");
+      }
+    });
+
+    if (filtertarget === filtertarget) {
+      workactive.classList.remove("active");
+    }
+    workprojects.classList.remove("anim-out");
+  }, 300);
+});
+
 function scrollTo(Selector) {
   const scrollTo = document.querySelector(Selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });

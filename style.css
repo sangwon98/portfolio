@@ -171,7 +171,7 @@ a {
 }
 .section__container {
   /*화면 너비는 1000~1200이 좋다*/
-  max-width: 1200px;
+  max-width: 1300px;
   margin: auto;
 }
 /*About*/
@@ -298,7 +298,8 @@ a {
   border: 1px solid var(--color-dark-white);
   border-radius: var(--size-border-radius);
   font-size: var(--font-regular);
-  padding: 8px 48px;
+  padding: 8px 0px;
+  width: 200px;
 }
 .category__btn.active,
 .category__btn:hover {
@@ -328,6 +329,12 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(20px);
 }
 .project {
   display: flex;
@@ -338,6 +345,10 @@ a {
   height: 260px;
   margin: 2px;
   background-color: var(--color-lightwhite);
+  transition: all var(--animation-duration) ease-in-out;
+}
+.project.invisible {
+  display: none;
 }
 .project__img {
   max-width: 100%;
@@ -381,9 +392,9 @@ a {
   bottom: 50px;
   right: 50px;
   font-size: 50px;
-  background-color: var(--color-blue);
+  background-color: var(--color-yellow);
   border-radius: 50%;
-  color: var(--color-yellow);
+  color: var(--color-blue);
   width: 70px;
   height: 70px;
   line-height: 70px;
