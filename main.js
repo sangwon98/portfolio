@@ -68,7 +68,7 @@ workbtncontainer.addEventListener("click", (e) => {
   const target =
     e.target.nodeName === "BUTTON" ? e.target : e.target.parentNode;
   target.classList.add("selected");
-
+  //필터링 애니메이션
   workprojects.classList.add("anim-out");
   setTimeout(() => {
     projects.forEach((project) => {
