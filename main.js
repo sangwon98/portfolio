@@ -21,7 +21,14 @@ navbarMenu.addEventListener("click", (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove("toggle"); //클릭하면 넷바창 닫히게 하기
   scrollTo(link);
+});
+//responsive toggle button
+const togglebtn = document.querySelector(".navbar__toggle-btn");
+//const navbarMenu = document.querySelector(".navbar__menu");
+togglebtn.addEventListener("click", () => {
+  navbarMenu.classList.toggle("toggle");
 });
 // home contact btn 클릭시 Contact로 이동
 const ContactBtn = document.querySelector(".home__contact");

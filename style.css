@@ -372,18 +372,18 @@ a {
   transform: translateY(0px);
 }
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-yellow);
 }
 .project__description h3:after {
-  content: "";
-  width: 25px;
+  content: ""; /*잘모르겠다 이 코드*/
+  width: 50px;
   height: 2px;
   background-color: var(--color-dark-white);
   display: block;
   position: relative;
   left: 50%;
   margin-top: 8px;
-  margin-left: -12.5px;
+  transform: translateX(-50%);
 }
 /*scroll*/
 .arrowbtn {
@@ -475,12 +475,19 @@ a {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-blue);
+  }
+  #navbar.navbar--dark {
+    padding: 16px;
   }
   .navbar__menu {
     flex-direction: column;
     width: 100%;
     text-align: center;
     display: none;
+  }
+  .navbar__menu.toggle {
+    display: block;
   }
   .About__majors {
     flex-direction: column;
