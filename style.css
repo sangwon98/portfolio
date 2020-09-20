@@ -161,6 +161,9 @@ a {
   border-radius: var(--size-border-radius);
   color: var(--color-white);
 }
+.home__contact:hover {
+  background-color: var(--color-blue);
+}
 
 /*Section*/
 .section {
@@ -471,6 +474,7 @@ a {
   .navbar__toggle-btn {
     display: block;
     top: 25px;
+    margin-right: 10px;
   }
   #navbar {
     flex-direction: column;
